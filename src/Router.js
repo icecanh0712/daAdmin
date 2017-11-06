@@ -10,6 +10,7 @@ import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 import Home from 'daAdmin/src/Component/Home';
 import Cart from 'daAdmin/src/Component/Cart';
+import Add from  'daAdmin/src/Component/Manage/Add';
 
 export const HomeStack = StackNavigator({
    Screen_Home: {
@@ -33,6 +34,18 @@ export const HomeStack = StackNavigator({
          screen: Cart,
          navigationOptions: {
              title: 'Đơn Hàng',
+             headerTintColor: 'white',
+             headerTitleStyle :{ color:'white', fontFamily: 'serif ',},
+             headerStyle: {backgroundColor:'#FF3364', paddingRight:10},
+         }
+     }
+ });
+
+ export const AddStack = StackNavigator({
+     DisplayAdd: {
+         screen: Add,
+         navigationOptions: {
+             title: 'Thêm sản phẩm',
              headerTintColor: 'white',
              headerTitleStyle :{ color:'white', fontFamily: 'serif ',},
              headerStyle: {backgroundColor:'#FF3364', paddingRight:10},
